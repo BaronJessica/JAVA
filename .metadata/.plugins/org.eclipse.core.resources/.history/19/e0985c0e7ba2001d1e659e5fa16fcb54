@@ -1,0 +1,55 @@
+package model;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import infra.MySQLConnectionFactory;
+
+public class ContatoDAOMySQL implements IContatoDAO {
+
+	@Override
+	public void incluir(Contato contato) {
+		Connection conn = MySQLConnectionFactory.getConnection();
+		try {
+			PreparedStatement pstmt = conn.prepareStatement("INSERT INTO contato (nome, numer) VALUES (?, ?)");
+			
+			pstmt.setString(1, contato.getNome());
+			pstmt.setString(2, contato.getNumero());
+			
+			pstmt.executeUpdate();
+			
+			conn.close();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		}
+
+	@Override
+	public void atualizar(Contato contato) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void contato(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Contato> obterTodos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Contato obterPorId(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

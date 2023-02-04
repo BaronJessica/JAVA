@@ -1,0 +1,8 @@
+package model;
+
+public interface IContatoDAO {
+	
+	void incluir(Contato contato); 
+	void atualizar(Contato contato); 
+	void contato(int id); 
+}

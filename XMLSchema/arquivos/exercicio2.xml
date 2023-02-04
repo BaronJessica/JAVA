@@ -1,0 +1,23 @@
+<?xml-stylesheet type = "text/xsl" href = "exercicio2.xsl"?> 
+<pedido>
+	<numero>1000</numero>	
+	<itens>	
+		<item>
+			<nome>notebook</nome>
+			<quantidade>1</quantidade>
+			<valor>3500</valor>
+		</item>		
+		<item>
+			<nome>mouse</nome>
+			<quantidade>2</quantidade>
+			<valor>150</valor>
+		</item>		
+		<item>
+			<nome>monitor LCD</nome>
+			<quantidade>2</quantidade>
+			<valor>2000</valor>
+		</item>	
+	</itens>
+</pedido>
+
+

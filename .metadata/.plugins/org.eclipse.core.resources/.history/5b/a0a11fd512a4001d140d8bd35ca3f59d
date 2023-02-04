@@ -1,0 +1,31 @@
+package application;
+
+import dao.ContatoDAO;
+
+import model.Contato;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		
+		
+		
+		
+		//Contato contato = new Contato();
+		//contato.setNome("panda");
+		//contato.setNumero("888-8888");
+		
+		//ContatoDAO.incluirContato(contato);
+		
+		Contato contatoObtido = ContatoDAO.obterContatoPorID(12);
+		
+		contatoObtido.setNumero("333");
+		ContatoDAO.atualizarContato(contatoObtido);
+		
+		//System.out.println(contatoObtido.getNome());
+		
+	
+		
+	}
+
+}

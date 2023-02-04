@@ -1,0 +1,17 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+<xs:element name="livros" type="tipoLivros"/>
+<xs:element name="livro" type="tipoLivro"/>
+
+<xs:complexType name="livro">
+  <xs:sequence>
+   <xs:element name="isbn"   type="xs:integer"/>
+   <xs:element name="nome" type="xs:string"/>
+   <xs:element name="autor"   type="xs:string"/>
+
+
+  </xs:sequence>
+ </xs:complexType>
+
+
+</xs:schema>

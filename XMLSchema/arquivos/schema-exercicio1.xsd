@@ -1,0 +1,23 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+	<xs:element name="livros" type="tipoLivros" />
+	
+	<xs:element name="livro" type="tipoLivro" />
+
+	<xs:complexType name="tipoLivros">
+		<xs:sequence>
+			<xs:element name="livro" type="tipoLivro" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>	
+
+	<xs:complexType name="tipoLivro">
+		<xs:sequence>
+			<xs:element name="isbn" type="xs:integer" minOccurs="1" maxOccurs="1" />
+			<xs:element name="nome" type="xs:string" minOccurs="1" maxOccurs="1" />
+			<xs:element name="autor" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	
+</xs:schema>
